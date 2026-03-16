@@ -9,7 +9,7 @@ const Button = ({
 }: {
   title: string;
   type: "top" | "right" | "number";
-  onPress: Function
+  onPress: () => void;
 }) => {
   return (
     <TouchableOpacity

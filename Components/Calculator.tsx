@@ -76,6 +76,11 @@ const Calculator = () => {
           onPress={() => handleOperatorInput("/")}
         />
         <Button
+          title="x"
+          type="right"
+          onPress={() => handleOperatorInput("*")}
+        />
+        <Button
           title="7"
           type="number"
           onPress={() => handleNumberInput("7")}
@@ -91,14 +96,14 @@ const Calculator = () => {
           onPress={() => handleNumberInput("9")}
         />
         <Button
-          title="x"
-          type="right"
-          onPress={() => handleOperatorInput("*")}
-        />
-        <Button
           title="6"
           type="number"
           onPress={() => handleNumberInput("6")}
+        />
+        <Button
+          title="-"
+          type="right"
+          onPress={() => handleOperatorInput("-")}
         />
         <Button
           title="5"
@@ -111,11 +116,6 @@ const Calculator = () => {
           onPress={() => handleNumberInput("4")}
         />
         <Button
-          title="-"
-          type="right"
-          onPress={() => handleOperatorInput("-")}
-        />
-        <Button
           title="1"
           type="number"
           onPress={() => handleNumberInput("1")}
@@ -126,14 +126,14 @@ const Calculator = () => {
           onPress={() => handleNumberInput("2")}
         />
         <Button
-          title="3"
-          type="number"
-          onPress={() => handleNumberInput("3")}
-        />
-        <Button
           title="+"
           type="right"
           onPress={() => handleOperatorInput("+")}
+        />
+        <Button
+          title="3"
+          type="number"
+          onPress={() => handleNumberInput("3")}
         />
         <Button
           title="0"

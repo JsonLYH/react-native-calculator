@@ -58,12 +58,14 @@ const Calculator = () => {
 
   return (
     <View style={styles.container}>
+      {/* 算数展示区域 */}
       <View style={styles.display}>
         <Text style={{ fontSize: 30, fontWeight: "300" }}>
           {firstValue + operator}
         </Text>
         <Text style={{ fontSize: 70, fontWeight: "300" }}>{displayValue}</Text>
       </View>
+      {/* 按键区域 */}
       <View style={styles.keypad}>
         <Button title="C" type="top" onPress={handleClear} />
         <Button title="⌫" type="top" onPress={handleDelete} />
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    gap: 30,
-    padding: 30,
+    gap: 10,
+    padding: 5,
   },
 });

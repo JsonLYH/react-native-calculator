@@ -1,16 +1,18 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import { Colors } from "@/utils/Colors";
+import { ThemeContext } from "@/utils/ThemeContext";
 
 const Button = ({
   title,
   type,
-  onPress
+  onPress,
 }: {
   title: string;
   type: "top" | "right" | "number";
   onPress: () => void;
 }) => {
+  const { currentTheme } = useContext(ThemeContext);
   return (
     <TouchableOpacity
       style={[
@@ -20,8 +22,8 @@ const Button = ({
             type == "top"
               ? Colors.btnDark
               : type == "right"
-              ? Colors.btnRight
-              : Colors.btnLight,
+                ? Colors.btnRight
+                : Colors.btnLight,
         },
       ]}
       onPress={onPress}

@@ -1,9 +1,10 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { Colors } from "@/utils/Colors";
 import Button from "./Button";
-
+import { ThemeContext } from "@/utils/ThemeContext";
 const Calculator = () => {
+  const { currentTheme } = useContext(ThemeContext);
   const [firstValue, setFirstValue] = useState("");
   const [displayValue, setDisplayValue] = useState("0");
   const [operator, setOperator] = useState("");
@@ -59,11 +60,15 @@ const Calculator = () => {
   return (
     <View style={styles.container}>
       {/* 算数展示区域 */}
-      <View style={styles.display}>
+      <View style={[styles.display, {
+        backgroundColor: currentTheme === "light" ? Colors.light : Colors.dark,
+      }]}>
         <Text style={{ fontSize: 30, fontWeight: "300" }}>
           {firstValue + operator}
         </Text>
-        <Text style={{ fontSize: 70, fontWeight: "300" }}>{displayValue}</Text>
+        <Text style={{ fontSize: 70, fontWeight: "300",color: currentTheme === "light" ? Colors.black : Colors.white }}>
+          {displayValue}
+        </Text>
       </View>
       {/* 按键区域 */}
       <View style={styles.keypad}>
@@ -164,7 +169,7 @@ const styles = StyleSheet.create({
   },
   display: {
     flex: 1,
-    backgroundColor: Colors.gray,
+    // backgroundColor: Colors.dark,
     paddingVertical: 20,
     paddingHorizontal: 40,
     alignItems: "flex-end",

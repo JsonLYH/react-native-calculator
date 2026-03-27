@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Colors } from "@/utils/Colors";
 import Button from "./Button";
 import { ThemeContext } from "@/utils/ThemeContext";
@@ -60,13 +60,25 @@ const Calculator = () => {
   return (
     <View style={styles.container}>
       {/* 算数展示区域 */}
-      <View style={[styles.display, {
-        backgroundColor: currentTheme === "light" ? Colors.light : Colors.dark,
-      }]}>
+      <View
+        style={[
+          styles.display,
+          {
+            backgroundColor:
+              currentTheme === "light" ? Colors.light : Colors.dark,
+          },
+        ]}
+      >
         <Text style={{ fontSize: 30, fontWeight: "300" }}>
           {firstValue + operator}
         </Text>
-        <Text style={{ fontSize: 70, fontWeight: "300",color: currentTheme === "light" ? Colors.black : Colors.white }}>
+        <Text
+          style={{
+            fontSize: 70,
+            fontWeight: "300",
+            color: currentTheme === "light" ? Colors.black : Colors.white,
+          }}
+        >
           {displayValue}
         </Text>
       </View>

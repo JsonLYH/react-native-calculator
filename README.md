@@ -2,6 +2,10 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app) to create a simple calculator app in react native.
 
+# Expo版本升级说明
+
+链接：https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/
+
 ## Get started
 
 1. Install dependencies
@@ -17,6 +21,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    ```
 
 ## App Screenshot
+
 ![React Native Calculator App](./iphone-calculator.png)
 
 ## Watch it on YouTube
